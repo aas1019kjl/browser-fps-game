@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser FPS Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        #gameContainer {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #hud {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        #crosshair {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 2px solid #00ff00;
+            border-radius: 50%;
+        }
+
+        #ammoDisplay {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            font-size: 24px;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        #healthDisplay {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            font-size: 24px;
+            color: #ff4444;
+            text-shadow: 0 0 10px #ff4444;
+        }
+
+        #minimap {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ff00;
+            margin-bottom: 80px;
+        }
+
+        #infoText {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            font-size: 16px;
+            color: #aaa;
+        }
+
+        .instructions {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 14px;
+            color: #aaa;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer"></div>
+    <div id="hud">
+        <div id="crosshair"></div>
+        <div id="healthDisplay">Health: 100</div>
+        <div id="ammoDisplay">Ammo: 30/120</div>
+        <div id="minimap"></div>
+        <div id="infoText">Browser FPS Game</div>
+        <div class="instructions">
+            <p>W/A/S/D - Move</p>
+            <p>Mouse - Look Around</p>
+            <p>Click - Shoot</p>
+            <p>Space - Jump</p>
+        </div>
+    </div>
+</body>
+</html>
